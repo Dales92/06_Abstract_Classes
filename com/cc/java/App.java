@@ -12,9 +12,9 @@ public class App {
         output("Fläche Rechteck: " + rectangle.area());
         output("Fläche Dreieck: " + triangle.area());
         output("Fläche Kreis: " + circle.area());
-        output("------- Differenzen--------");
-        output("Diff. r-t" + areaDiff(rectangle, triangle));
-
+        output("------- Differenzen -------");
+        output("Diff. r-t: " + areaDiff(rectangle, triangle));
+        output("Diff. r-c: " + areaDiff(rectangle, circle));
     }
 
 
@@ -22,8 +22,20 @@ public class App {
 
         return r.area() - t.area();
 
+    }
+
+    private static double areaDiff(Rectangle r, Circle c) {
+
+        return r.area() - c.area();
 
     }
+
+
+
+
+
+
+
 
     public static void output(String outputStr) {
         System.out.println(outputStr);
