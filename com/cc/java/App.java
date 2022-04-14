@@ -12,20 +12,18 @@ public class App {
         output("Fläche Rechteck: " + rectangle.area());
         output("Fläche Dreieck: " + triangle.area());
         output("Fläche Kreis: " + circle.area());
-
-
-
-
-
-
-
-
-
+        output("------- Differenzen--------");
+        output("Diff. r-t" + areaDiff(rectangle, triangle));
 
     }
 
 
+    private static double areaDiff(Rectangle r, Triangle t) {
 
+        return r.area() - t.area();
+
+
+    }
 
     public static void output(String outputStr) {
         System.out.println(outputStr);
